@@ -1,7 +1,7 @@
 #ifndef KASYNC_CONFIG_INCLUDED_H
 #define KASYNC_CONFIG_INCLUDED_H
-/* #undef KSOCKET_SSL */
-/* #undef KSOCKET_SSL_BIO */
+#define KSOCKET_SSL 1
+#define KSOCKET_SSL_BIO 1
 /* #undef LINUX */
 /* #undef LINUX_IOURING */
 /* #undef HAVE_ACCEPT4 */

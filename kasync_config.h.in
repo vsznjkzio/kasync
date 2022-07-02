@@ -1,0 +1,22 @@
+#ifndef KASYNC_CONFIG_INCLUDED_H
+#define KASYNC_CONFIG_INCLUDED_H
+${define KSOCKET_SSL}
+${define KSOCKET_SSL_BIO}
+${define LINUX}
+${define LINUX_IOURING}
+${define HAVE_ACCEPT4}
+${define KASYNC_TEST}
+${define HAVE_MEMALIGN}
+${define HAVE_SETMNTENT}
+${define DISABLE_KFIBER}
+${define FREEBSD}
+${define DARWIN}
+#ifndef NDEBUG
+${define MALLOCDEBUG}
+#endif
+${define ENABLE_LIBUCONTEXT}
+#ifdef HAVE_ACCEPT4
+#undef _GNU_SOURCE
+#define _GNU_SOURCE
+#endif
+#endif

@@ -1,2 +1,5 @@
-
-build/
+/.vs/
+/build/
+/CMakeSettings.json
+/.xmake/
+/out/
