@@ -2,7 +2,7 @@
 
 
 
-add_requires("openssl")
+add_requires("openssl","gtest")
 
 target("kasync")
 if is_plat("windows") then
@@ -25,10 +25,19 @@ end
 
 target("example")
  set_kind("binary")
-
  add_packages("openssl")
  add_syslinks("ws2_32","advapi32")
-
  add_includedirs("./include/")
  add_files("./src/*.c")
  add_files("./example/pingpang.c")
+
+
+ target("test")
+ set_kind("binary")
+ add_packages("openssl","gtest")
+ add_syslinks("ws2_32","advapi32")
+ add_includedirs("./include/")
+ add_includedirs("./test/")
+ add_files("./src/*.c")
+ add_files("./test/*.cc")
+ add_files("./test/kfiter_test/*.cc")
