@@ -3,11 +3,20 @@
 #include "kfeature.h"
 
 #ifdef KSOCKET_SSL
+#ifdef WOLFSSL_SSL
+#include <wolfssl/openssl/ssl.h>
+#include <wolfssl/openssl/err.h>
+#include <wolfssl/openssl/conf.h>
+#include <wolfssl/openssl/engine.h>
+#include <wolfssl/openssl/evp.h>
+#else
 #include <openssl/ssl.h>
 #include <openssl/err.h>
 #include <openssl/conf.h>
 #include <openssl/engine.h>
 #include <openssl/evp.h>
+#endif
+
 #include "kselector.h"
 #include "kssl_bio.h"
 #include "kmalloc.h"

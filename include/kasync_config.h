@@ -2,6 +2,8 @@
 #define KASYNC_CONFIG_INCLUDED_H
 #define KSOCKET_SSL 1
 #define KSOCKET_SSL_BIO 1
+/* #undef WOLFSSL_SSL */
+/* #undef OPENSSL_EXTRA */
 /* #undef LINUX */
 /* #undef LINUX_IOURING */
 /* #undef HAVE_ACCEPT4 */
@@ -11,6 +13,7 @@
 /* #undef DISABLE_KFIBER */
 /* #undef FREEBSD */
 /* #undef DARWIN */
+
 #ifndef NDEBUG
 /* #undef MALLOCDEBUG */
 #endif
