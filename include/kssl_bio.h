@@ -4,6 +4,7 @@
 #ifdef ENABLE_KSSL_BIO
 #include "kselector.h"
 #ifdef WOLFSSL_SSL
+#include <wolfssl/options.h>
 #include <wolfssl/openssl/ssl.h>
 
 #include <wolfssl/openssl/bio.h>

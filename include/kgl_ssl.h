@@ -4,6 +4,8 @@
 
 #ifdef KSOCKET_SSL
 #ifdef WOLFSSL_SSL
+
+#include <wolfssl/options.h>
 #include <wolfssl/openssl/ssl.h>
 #include <wolfssl/openssl/err.h>
 #include <wolfssl/openssl/conf.h>

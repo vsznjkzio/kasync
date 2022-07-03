@@ -3,7 +3,6 @@
 ${define KSOCKET_SSL}
 ${define KSOCKET_SSL_BIO}
 ${define WOLFSSL_SSL}
-${define OPENSSL_EXTRA}
 ${define LINUX}
 ${define LINUX_IOURING}
 ${define HAVE_ACCEPT4}
@@ -13,7 +12,13 @@ ${define HAVE_SETMNTENT}
 ${define DISABLE_KFIBER}
 ${define FREEBSD}
 ${define DARWIN}
+#ifdef WOLFSSL_SSL
 
+
+
+
+#define BIO_get_init(x) (x->init)
+#endif
 #ifndef NDEBUG
 ${define MALLOCDEBUG}
 #endif
