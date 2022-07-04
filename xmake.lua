@@ -1,7 +1,4 @@
 
-
-
-
 add_requires("openssl","gtest")
 
 target("kasync")
@@ -34,3 +31,12 @@ target("test")
  add_files("./src/*.c")
  add_files("./test/*.cc")
  add_files("./test/kfiter_test/*.cc")
+
+
+target("libasync")
+ set_kind("shared")
+ add_packages("openssl")
+ add_syslinks("ws2_32","advapi32")
+ add_includedirs("./include/")
+ add_files("./src/*.c")
+--todo::导出函数
