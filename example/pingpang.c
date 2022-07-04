@@ -24,10 +24,10 @@ int connection_fiber(void *arg,int got)
 int main_fiber(void *arg,int argc)
 {
     kserver* server = kserver_init();
-    kserver_bind(server, "127.0.0.1", 0,  NULL);//ipv6
+    kserver_bind(server, "0.0.0.0", 0,  NULL);//ipv6
     kserver_selectable* ss = NULL;
     kfiber_net_listen(server, 0,&ss);
-    printf("success listen 127.0.0.1:%d\n",ksocket_addr_port(&server->addr));
+    printf("success listen 0.0.0.0:%d\n",ksocket_addr_port(&server->addr));
     for (;;) {
         kconnection* c = NULL;
         int ret = kfiber_net_accept(ss, &c);
